@@ -1,3 +1,13 @@
+// Font Imports 
+
+// Germania Font
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+// font-family: 'Germania One', cursive;
+
+// Makazi Text Font
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text:400,500,600,700');
+// font-family: 'Markazi Text', serif;
+
 h1 {
   color: #ff0000;
   text-align: center;
@@ -7,8 +17,11 @@ h1 {
 .beer-list {
   list-style: none;
   .beer-item-list {
+    width: 40%;
+    margin: 0 auto;
     a {
       text-decoration: none;
+      text-align: left;
     }
   }
 }
