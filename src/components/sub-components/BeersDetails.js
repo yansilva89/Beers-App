@@ -23,16 +23,16 @@ class BeersDetails extends React.Component {
 
     //
     render() {
-      const beer = this.state.beer   
-      return (
-        <div className='product-details'>
-            <p>{beer[0].name}</p>
-            <p>{beer[0].tagline}</p>
-            <p>{beer[0].first_brewed}</p>
-            <p>{beer[0].description}</p>
-            <img src={beer[0].image_url} alt=""/>
-        </div>
-      )
+        const beer = this.state.beer[0] || ''
+        return (
+          <div className='product-details'>
+              <p>{beer.name}</p>
+              <p>{beer.tagline}</p>
+              <p>{beer.first_brewed}</p>
+              <p>{beer.description}</p>
+              <img src={beer.image_url} alt=""/>
+          </div>
+        )
     }
 }
 
