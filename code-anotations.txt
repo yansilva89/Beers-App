@@ -1,9 +1,7 @@
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <BeersContainer></BeersContainer>
-      </div>
-    );
-  }
-}
+
+
+<p>{beer.name}</p>
+<p>{beer.tagline}</p>
+<p>{beer.first_brewed}</p>
+<p>{beer.description}</p>
+<img src={beer.image_url} alt=""/>

@@ -24,13 +24,13 @@ class BeersContainer extends Component {
             <div>
                 <h1>Beers List</h1>
                 <ul className='beer-list'>
-                    {this.state.beers.map( beer => (
+                    {this.state.beers.map( beer => 
                         <li className='beer-item-list' key={beer.id}>
-                            <Link to='/beer-details'>
-                                <p>{ beer.name }<br/><span>{ beer.tagline }</span></p>                                
+                            <Link to={`/beers/${beer.id}`}>
+                                <p>{beer.name}<br/><span>{beer.tagline}</span></p>                                
                             </Link>
                         </li>
-                    ))}                    
+                    )}                    
                 </ul>
             </div>
         )
