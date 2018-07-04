@@ -9,7 +9,8 @@ class BeersContainer extends Component {
         this.state = {
             beers: [
 
-            ]
+            ],
+            //loading: true
         }
     }
 
@@ -20,6 +21,7 @@ class BeersContainer extends Component {
 
     // Render > Return
     render() {
+        const loading = this.state.loading;
         return (
             <div className='container'>
                 <h1 className='title'>'BeersList'</h1>
@@ -28,16 +30,18 @@ class BeersContainer extends Component {
                     <p>- Thomas Jefferson</p>  
                     <hr/>                  
                 </div>
+                { this.state.loading ? (<div className='loading'><h3>Loading...</h3></div>) : (                   
                 <ul className='beer-list'>
-                    <h2>A Spectacular List of Beers</h2>
-                    {this.state.beers.map( beer => 
-                        <li className='beer-item-list' key={beer.id}>
-                            <Link to={`/beers/${beer.id}`}>
-                                <p>{beer.name}<br/><span>{beer.tagline}</span></p>                                
-                            </Link>
-                        </li>
-                    )}                    
+                    <h2>A Spectacular List of Beers</h2>                    
+                    { this.state.beers.map( beer => 
+                    <li className='beer-item-list' key={beer.id}>
+                        <Link to={`/beers/${beer.id}`}>
+                            <p>{beer.name}<br/><span>{beer.tagline}</span></p>                                
+                        </Link>
+                    </li> 
+                    )}                                                                                    
                 </ul>
+                )}
             </div>
         )
     }
