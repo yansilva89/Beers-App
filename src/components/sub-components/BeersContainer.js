@@ -10,18 +10,17 @@ class BeersContainer extends Component {
             beers: [
 
             ],
-            //loading: true
+            loading: true,
         }
     }
 
     // ComponentDidMount
     componentDidMount() {
-        fetchAllBeers('abv_gt').then(res => this.setState({ beers: res.data }))
+        fetchAllBeers('abv_gt').then(res => this.setState({ beers: res.data, loading: false }))
     }
 
     // Render > Return
-    render() {
-        const loading = this.state.loading;
+    render() {        
         return (
             <div className='container'>
                 <h1 className='title'>'BeersList'</h1>
