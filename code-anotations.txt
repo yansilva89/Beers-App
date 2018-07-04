@@ -1,7 +1,6 @@
-
-
-<p>{beer.name}</p>
-<p>{beer.tagline}</p>
-<p>{beer.first_brewed}</p>
-<p>{beer.description}</p>
-<img src={beer.image_url} alt=""/>
+overflow: scroll;
+&::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
