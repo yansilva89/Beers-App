@@ -132,6 +132,22 @@
           max-width: 80%;
         }
       }
+      .btn {
+        text-align: center;
+        button {
+          color: #373806;
+          padding: 6px 30px;
+          margin-top: 10px;
+          background-color: #dfdccb;
+          font-family: 'Bree Serif', serif;
+          font-size: 1.2em;
+          border-radius: 5px;
+          cursor: pointer;
+          &:active, &:focus {
+            outline: 0;
+          }
+        }
+      }
     }
     /* End Beer Details Page */
   }  

@@ -8,8 +8,9 @@ class BeersDetails extends React.Component {
         this.state = {
             beer: [
 
-            ]
-        }
+            ]            
+        };
+        this.backToHome = this.backToHome.bind(this);
     }
 
     //
@@ -19,6 +20,11 @@ class BeersDetails extends React.Component {
                 beer: res.data
             })
         ))
+    }
+
+    //
+    backToHome() {
+        this.props.history.goBack();
     }
 
     //
@@ -33,6 +39,9 @@ class BeersDetails extends React.Component {
                 <p>{beer.description}</p>
                 <div className="beer-img">
                     <img src={beer.image_url} alt=""/>
+                </div>
+                <div className="btn">
+                    <button onClick={this.backToHome}>Back</button>
                 </div>
               </div>
           </div>
