@@ -2,24 +2,90 @@
 @import url('https://fonts.googleapis.com/css?family=Germania+One');
 /* font-family: 'Germania One', cursive; */
 
-/* Makazi Text Font */
-@import url('https://fonts.googleapis.com/css?family=Markazi+Text:400,500,600,700');
-/* font-family: 'Markazi Text', serif; */
+/* Bree Serif Font */
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+/* font-family: 'Bree Serif', serif; */
 
-h1 {
-  color: #ff0000;
-  text-align: center;
-}
+/* Abril Fatface Font */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+/* font-family: 'Abril Fatface', cursive; */
 
-/* Beer List */
-.beer-list {
-  list-style: none;
-  .beer-item-list {
+#root {
+  background-color: #DFDCCB;
+  background: linear-gradient(to left bottom, #DFDCCB 0%, #9E945C 100%);
+  .container {
     width: 40%;
     margin: 0 auto;
-    a {
-      text-decoration: none;
-      text-align: left;
+    padding: 0 50px;
+    background-color: #000;
+    background: linear-gradient(to top left, #404006 0%, #000000 100%);
+    font-family: 'Abril Fatface', cursive;
+    box-shadow: 1px 0px 25px #000;
+    .title {
+      color: #cdb177;
+      text-align: center;
+      font-family: 'Germania One', cursive;
+      font-size: 4em;
+      margin: 0;
+      padding: 20px 0;
     }
-  }
+    .quote {
+      font-family: 'Bree Serif', serif;
+      color: #9E945C;
+      h4 {
+        font-size: 1.2em;
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 5px;
+        font-size: 1em;
+        text-align: right !important;        
+        padding-right: 15px;
+      }
+      hr {
+        width: 25%;
+        margin: 0 auto;
+        margin-top: 40px;
+        border-color: #DFDCCB;
+      }
+    }
+    /* Beer List */
+    .beer-list {
+      list-style: none;
+      padding: 1px 0 30px 0;
+      margin-bottom: 0;
+      h2 {
+        text-align: center;
+        color: #DFDCCB;
+        font-size: 1.5em;
+      }
+      .beer-item-list { 
+        width: 65%;              
+        a {
+          text-decoration: none;
+          text-align: left;
+          color: #DFDCCB;
+          font-size: 1.2em;
+          p {
+            margin-bottom: 0;
+            span {
+              font-size: 0.7em;
+              color: #BFB8A1;
+              padding-left: 10px;   
+              border-left: 2px solid #DFDCCB;
+              transition: color 0.8s ease;
+            }
+          }
+          &:hover, &:active {
+            color: #fff;
+            p {
+              span {
+                color: #DFDCCB;
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
 }

@@ -21,9 +21,15 @@ class BeersContainer extends Component {
     // Render > Return
     render() {
         return (
-            <div>
-                <h1>Beers List</h1>
+            <div className='container'>
+                <h1 className='title'>'BeersList'</h1>
+                <div className="quote">
+                    <h4>“Beer, if drunk in moderation, softens the temper, cheers the spirit and promotes health.”</h4>
+                    <p>- Thomas Jefferson</p>  
+                    <hr/>                  
+                </div>
                 <ul className='beer-list'>
+                    <h2>A Spectacular List of Beers</h2>
                     {this.state.beers.map( beer => 
                         <li className='beer-item-list' key={beer.id}>
                             <Link to={`/beers/${beer.id}`}>
